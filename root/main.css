@@ -15,7 +15,7 @@ h1, h2, h3 {
 }
 
 html {
-    font-family: "Kelly", Roboto, sans-serif;
+    font-family: "Kelly", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--font);
     scroll-behavior: smooth;
 }
@@ -24,9 +24,10 @@ body {
     background-color: var(--blue);
     box-shadow: inset 0px -32px 99px var(--black);
     margin: 0;
+    scroll-behavior: smooth;
 }
 
-main {
+section {
     padding: 0 35px;
 }
 
@@ -98,7 +99,8 @@ nav .navbar__menu li a {
 }
 
 .podheader {
-    height: 100vh;
+    height: calc(100vh - 50px);
+    box-shadow: inset 0px -32px 99px 0px var(--black);
 }
 
 h1 {
@@ -111,6 +113,9 @@ h3 {
 
 .photo_block {
     margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .photo_block a {
@@ -129,7 +134,7 @@ h3 {
 }
 
 .title {
-    margin: 30px 0 0 0;
+    padding: 35px 0 0 0;
     text-align: right;
 }
 
@@ -140,7 +145,7 @@ h3 {
 .icon {
     position: absolute;
     left: 45%;
-    margin-top: 10px;
+    margin-top: 20px;
     opacity: 0.6;
     transition: 0.3s;
 }
@@ -150,6 +155,40 @@ h3 {
     transition: 0.3s;
 }
 
+.block--black {
+    background-color: #0B0B0B;
+}
+
+.block-small {
+    padding-bottom: 35px;
+}
+
+.header--line {
+    display: inline-block;
+    padding: 0 40px 0 0;
+}
+
+.header--line::after {
+    display: block;
+    content: "";
+    height: 1px;
+    margin-top: 5px;
+    width: 150%;
+    background-color: var(--white);
+}
+
+.header--small {
+    font-size: 28px;
+    padding: 10px 20px 0 0;
+}
+
+.glide img {
+    height: 470px;
+}
+
+.glide ul {
+    margin: 0;
+}
 
 @media (min-width: 760px) { 
     header nav {
