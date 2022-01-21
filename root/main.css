@@ -100,7 +100,6 @@ nav .navbar__menu li a {
 .podheader {
     height: calc(100vh - 50px);
     min-height: 580px;
-    box-shadow: inset 0px -32px 99px 0px var(--black);
     padding: 0;
 }
 
@@ -225,7 +224,7 @@ input.button {
 }
 
 .block--padding {
-    padding-top: 35px;
+    padding: 35px;
 }
 
 .header--line {
@@ -283,8 +282,56 @@ input.button {
     margin: 5px 0;
 }
 
+footer .row-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
+.row-list .row-list__item { 
+    list-style: none;
+    font-size: 15px;
+    position: relative;
+    margin: 0 10px;
+    white-space: nowrap;
+}
 
+.row-list .row-list__item a::after { 
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    display: block;
+    height: 100%;
+    width: 1.5px;
+    background-color: white;
+}
+
+.row-list .row-list__item:last-child a::after {
+    display: none;
+}
+
+.block-center {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    padding: 1em;
+    font-size: 13px;
+}
+
+footer.block--padding {
+    padding-bottom: 0;
+}
+
+main .block--bg {
+    box-shadow: inset 0px -32px 99px var(--black);
+}
 
 @media (min-width: 760px) { 
     header nav {
