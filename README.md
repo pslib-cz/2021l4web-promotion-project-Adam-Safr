@@ -1,5 +1,5 @@
-# Promotion project
-**Author:** *Adam Šáfr* \
-**Brand:** sappherio
+# Promotion project L4
+**Autor:** Adam Šáfr
+**Značka:** sappherio
 ## Landing page
-**[here](https://pslib-cz.github.io/2021l4web-promotion-project-Adam-Safr/root/index.html)**
+**[Web](https://pslib-cz.github.io/2021l4web-promotion-project-Adam-Safr/root/index.html)**
