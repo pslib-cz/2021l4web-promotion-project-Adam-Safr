@@ -25,6 +25,7 @@ body {
     box-shadow: inset 0px -32px 99px var(--black);
     margin: 0;
     scroll-behavior: smooth;
+    min-width: 320px;
 }
 
 section {
@@ -115,6 +116,7 @@ h3 {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -169,6 +171,8 @@ input.button {
 
 .photo_block .photo--big {
     height: calc(100vh / 1.7);
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .photo_block .photo--big img {
@@ -177,6 +181,7 @@ input.button {
 
 .photo_block .photo--small {
     width: 70%;
+    margin: 0 auto;
 }
 
 .photo_block .photo--small img {
@@ -244,6 +249,7 @@ input.button {
 .header--small {
     font-size: 28px;
     padding: 10px 20px 0 0;
+    margin: 0;
 }
 
 .header--biggest {
@@ -251,11 +257,11 @@ input.button {
 }
 
 .glide img {
-    height: 470px;
+    width: 100%;
 }
 
-.glide ul {
-    margin: 0;
+.glide__slide_2 img {
+    border: 1px solid;
 }
 
 .shop_list {
@@ -331,6 +337,11 @@ footer.block--padding {
 
 main .block--bg {
     box-shadow: inset 0px -32px 99px var(--black);
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 @media (min-width: 760px) { 
