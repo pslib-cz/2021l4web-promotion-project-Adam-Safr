@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Roboto+Slab:wght@200;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.css">
     <link href="./main.css" rel="stylesheet" >
@@ -27,26 +31,32 @@
             </div>
         </nav>
     </header>
-    <section class="podheader block--bg">
-        <div class="title"><h1>Sappherio &copy; kolekce pro muže</h1>
-        <h2>Azul DZ330X</h2></div>
-        <div class="photo"><figure class="photo__block">
-            <a href="#produkt" class="photo--big">
-                <img src="./img/Hodinky_modre.png" alt="modré hodinky sappherio">
-            </a>
-            <figcaption><p>Poznejte naše nové hodinky</p>
-                <h2 class="header--big">Staráme se o čas.</h2>
-                <span class="icon"><a href="#welcome"><img src="./img/angle-down.svg" alt="angle down šipka dolů">
-                  </a></span></figcaption>
-        </figure>
-        </div>
-    </section>
+
     <main>
-    <section class="block-small" id="welcome">
-        <h2 class="header--small header--line">Elegance a moderní design</h2>
-        <p>Nová česká značka elegantních a kvalitních hodinek přichází z novou kolekcí. Modrá safírová barva typická pro naši značku vyniká v minimalistických detailech na hodinkách z nerezové oceli. Přesný čas zaručují švýcarské ručičky.</p>
+
+    <section class="block--bg">
+        <div class="podheader">
+            <div class="podheader__title"><h1>Sappherio &copy; kolekce pro muže</h1><h2><span class="typing"></span></h2></div>
+            <figure class="photo__block">
+                <a href="#edice" class="photo--big">
+                    <img src="./img/Hodinky_modre.png" alt="modré hodinky sappherio">
+                </a>
+            </figure>
+            <div class="podheader__caption">
+                <p>Poznejte naše nové hodinky</p>
+                <h2 class="header--big">Staráme se o čas.</h2>
+                <span class="icon"><a href="#welcome"><img src="./img/angle-down.svg" alt="angle down šipka dolů"></a></span>
+            </div>
+    </div>
     </section>
-        <div class="container">
+
+    <section id="welcome">
+        <div>
+            <h2 class="header--small header--line">Elegance a moderní design</h2>
+            <p>Nová česká značka elegantních a kvalitních hodinek přichází z novou kolekcí. Modrá safírová barva typická pro naši značku vyniká v minimalistických detailech na hodinkách z nerezové oceli. Přesný čas zaručují švýcarské ručičky.</p>
+        </div>
+
+    <div class="container">
             <div class="glide glide glide--ltr glide--carousel glide--swipeable">
                 <div class="glide__track" data-glide-el="track">
                   <ul class="glide__slides">
@@ -56,7 +66,7 @@
                   </ul>
                 </div>
               </div> 
-        </div>
+    </div>
         <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
         <script>
             var glide = new Glide('.glide', {
@@ -84,41 +94,57 @@
                 })
                 glide.mount()
         </script> 
-    <section class="block-small block--dark" id="o-znacce">
-        <h2 class="header--small header--line">O značce</h2>
-        <p>Sappherio je česká značka zabývající se výrobou kvalitních hodinek. Použití prémiových materiálů a moderní minimalistický design nám dává náskok od konkurence. Dle názvu je pro nás typická safírová barva elegantně použitá v hodinkách.</p>
-        <span><img src="./img/sappherio_logo.svg"></span>
     </section>
-    <section class="block-small block--bg" id="edice">
-        <h2 class="header--small header--line">Přicházíme s novou edicí hodinek</h2>
-        <p>Objevte novou kolekci značky Sappherio. Precizní, elegantní hodinky z kolekce Azul. Hodinky této řady nabízí jedinečný a jednoduchý design s prestižním provedením. Hodinky sednou na ruku každému. Objevte kolekci Azul a perfektně ji zkombinujte s vaším stylem.</p>
-        <figure class="photo__block">
-            <a href="#koupit" class="photo--small">
-                <img src="./img/Hodinky_modre_male.png" alt="modré hodinky sappherio">
-            </a>
-            <figcaption><p>Sappherio Azul DZ330X</p>
-            <p>85 750   Kč</p></figcaption>
-        </figure>
-        <div class="btn_block">
-            <button class="btn-primary">Koupit</button>
+
+    <section class="block--dark" id="o-znacce">
+        <div>
+            <h2 class="header--small header--line">O značce</h2>
+            <p>Sappherio je česká značka zabývající se výrobou kvalitních hodinek. Použití prémiových materiálů a moderní minimalistický design nám dává náskok od konkurence. Dle názvu je pro nás typická safírová barva elegantně použitá v hodinkách.</p>
+                <svg class="animation" xmlns="http://www.w3.org/2000/svg" width="231" height="61" viewBox="0 0 231 61">
+                <text id="Sappherio" fill="#fff" font-size="40" font-family="KellySlab-Regular, Kelly Slab">
+                    <tspan x="0" y="48">sappherio</tspan></text>
+                </svg>
         </div>
     </section>
-    <section class="block-small block--dark">
-       <ul class="shop_list">
-           <li class="shop_list__item"><a href="#">Hodinářství Bechyně</a><span><a href="#" ><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
-           <li class="shop_list__item"><a href="#">Hodinky.cz</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
-           <li class="shop_list__item"><a href="#">Hodinářství U Soudu</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
-           <li class="shop_list__item"><a href="#">Tovys.cz</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
-       </ul>
+
+    <section class="block--bg" id="edice">
+        <div>
+            <h2 class="header--small header--line">Přicházíme s novou edicí hodinek</h2>
+            <p>Objevte novou kolekci značky Sappherio. Precizní, elegantní hodinky z kolekce Azul. Hodinky této řady nabízí jedinečný a jednoduchý design s prestižním provedením. Hodinky sednou na ruku každému. Objevte kolekci Azul a perfektně ji zkombinujte s vaším stylem.</p>
+            <figure class="photo__block">
+                <a href="#koupit" class="photo--small">
+                    <img src="./img/Hodinky_modre_male.png" alt="modré hodinky sappherio">
+                </a>
+                <figcaption><p>Sappherio Azul DZ330X</p>
+                <p>85 750   Kč</p></figcaption>
+            </figure>
+            <div class="btn_block">
+                <button class="btn-primary">Koupit</button>
+            </div>
+        </div>
     </section>
+
+    <section class="block--dark">
+        <div>
+            <ul class="shop_list">
+                <li class="shop_list__item"><a href="#">Hodinářství Bechyně</a><span><a href="#" ><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
+                <li class="shop_list__item"><a href="#">Hodinky.cz</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
+                <li class="shop_list__item"><a href="#">Hodinářství U Soudu</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
+                <li class="shop_list__item"><a href="#">Tovys.cz</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
+            </ul>
+        </div>
+    </section>
+
     <section class="block-small block--padding block--bg">
-        <h2 class="header--biggest">Staráme se o čas.</h2>
-        <p class="podtitle">Novinky emailem, přihlaš se k odběru</p>
-        <div class="btn_block btn--left">
+        <div>
+            <h2 class="header--biggest">Staráme se o čas.</h2>
+            <p class="podtitle">Novinky emailem, přihlaš se k odběru</p>
+            <div class="btn_block btn--left">
             <input class="button btn-primary" placeholder="Zadejte váš email"></input>
         </div>
     </section>
-</main>
+    </main>
+
     <footer class="block--padding block--dark" id="footer">
         <ul class="row-list">
             <li class="row-list__item"><a>Kontakty</a></li>
@@ -143,15 +169,18 @@
         </ul>
         <p>&copy; 2021</p>
     </footer>
+    
+    <script>
+        $('.navbar__btn').click(function () {
+            $('.navbar .navbar__menu').toggleClass("active");
+        });
+
+        $('.navbar__menu').click(function () {
+            $('.navbar .navbar__menu').removeClass("active");
+        });
+    </script>
+    <script src="./script.js"></script>
+
 </body>
 </html>
 
-<script>
-    $('.navbar__btn').click(function () {
-        $('.navbar .navbar__menu').toggleClass("active");
-    });
-
-    $('.navbar__menu').click(function () {
-        $('.navbar .navbar__menu').removeClass("active");
-    });
-</script>
