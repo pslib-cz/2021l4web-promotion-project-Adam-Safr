@@ -23,7 +23,7 @@ body {
     box-shadow: inset 0px -32px 99px var(--black);
     margin: 0;
     scroll-behavior: smooth;
-    min-width: 320px;
+    min-width: 340px;
     overflow-x: hidden;
 }
 
@@ -70,17 +70,17 @@ nav .navbar__logo {
 
 nav .navbar__menu li {
     list-style: none;
-    display: inline-block;
     margin: 0;
     color: var(--blue);
+    display: block;
 }
 
 nav .navbar__menu li a {
-    display: block;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 25px;
-    transition: color 0.3s ease;
+    display: inline-block;
+    margin: 25px 0;
+    font-size: 25px;
+    color: var(--font-color);
+    text-decoration: none;
 }
 
 .navbar .navbar__menu {
@@ -98,18 +98,6 @@ nav .navbar__menu li a {
     background-color: var(--white);
     margin-top: 40px;
     padding: 30px 0 0 0;
-}
-
-.navbar .navbar__menu li {
-    display: block;
-}
-
-.navbar .navbar__menu li a {
-    display: inline-block;
-    margin: 25px 0;
-    font-size: 25px;
-    color: var(--font-color);
-    text-decoration: none;
 }
 
 main section:first-child {
@@ -199,8 +187,8 @@ main section:first-child {
     width: 20px;
 }
 
-.arrow-top,
-.arrow-bottom {
+.arrow__top,
+.arrow__bottom {
     background-color: #666;
     height: 4px;
     left: -5px;
@@ -209,8 +197,8 @@ main section:first-child {
     width: 100%;
 }
 
-.arrow-top:after,
-.arrow-bottom:after {
+.arrow__top:after,
+.arrow__bottom:after {
     background-color: #fff;
     content: '';
     height: 100%;
@@ -219,34 +207,34 @@ main section:first-child {
     transition: all 0.15s;
 }
 
-.arrow-top {
+.arrow__top {
     transform: rotate(45deg);
     transform-origin: bottom right;
 }
 
-.arrow-top:after {
+.arrow__top:after {
     left: 100%;
     right: 0;
     transition-delay: 0s;
 }
 
-.arrow-bottom {
+.arrow__bottom {
     transform: rotate(-45deg);
     transform-origin: top right;
 }
 
-.arrow-bottom:after {
+.arrow__bottom:after {
     left: 0;
     right: 100%;
     transition-delay: 0.15s;
 }
 
-.arrow:hover .arrow-top:after {
+.arrow:hover .arrow__top:after {
     left: 0;
     transition-delay: 0.15s;
 }
 
-.arrow:hover .arrow-bottom:after {
+.arrow:hover .arrow__bottom:after {
     right: 0;
     transition-delay: 0s;
 }
@@ -376,7 +364,7 @@ svg {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin: 1em;
+    margin: 1em 0 1em 0;
     align-items: center;
 }
 
@@ -420,7 +408,7 @@ footer .row-list {
     display: none;
 }
 
-.block-center {
+.block--center {
     display: flex;
     justify-content: center;
     margin: 1em 0;
@@ -464,6 +452,77 @@ footer p {
 
 .animation text {
     animation: stroke 4s infinite alternate;
+}
+
+:root {
+    --delay: 0;
+    --duration: 800ms;
+    --iterations: 1;
+}
+
+.reveal-text,
+.reveal-text::after {
+    animation-delay: var(--animation-delay, 2s);
+    animation-iteration-count: var(--iterations, 1);
+    animation-duration: var(--duration, 800ms);
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.reveal-text {
+    --animation-delay: var(--delay, 0);
+    --animation-duration: var(--duration, 800ms);
+    --animation-iterations: var(--iterations, 1);
+    position: relative;
+    animation-name: clip-text;
+    color: #fff;
+    cursor: default;
+}
+
+.reveal-text::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: text-revealer;
+}
+
+@keyframes clip-text {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes text-revealer {
+
+    0%,
+    50% {
+        transform-origin: 0 50%;
+    }
+
+    60%,
+    100% {
+        transform-origin: 100% 50%;
+    }
+
+    60% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
 }
 
 @keyframes stroke {
@@ -511,19 +570,19 @@ footer p {
         padding: 15px 35px 0 35px;
     }
 
-    .navbar .navbar__btn {
+    .navbar .navbar__btn, .navbar .navbar__menu.active .navbar__btn {
         display: none;
     }
 
-    .navbar .navbar__logo {
+    .navbar .navbar__logo, .navbar .navbar__menu.active .navbar__logo {
         order: 1;
     }
 
-    .navbar .navbar__icon {
+    .navbar .navbar__icon, .navbar .navbar__menu.active .navbar__icon {
         order: 3;
     }
 
-    .navbar .navbar__menu {
+    .navbar .navbar__menu, .navbar .navbar__menu.active {
         position: static;
         height: 100%;
         width: auto;
@@ -533,19 +592,19 @@ footer p {
         margin: 0;
     }
 
-    .navbar .navbar__menu li {
+    .navbar .navbar__menu li, .navbar .navbar__menu.active li {
         list-style: none;
         display: inline-block;
         margin: 0 1.7em;
         padding: 0;
     }
 
-    .navbar .navbar__menu li a {
+    .navbar .navbar__menu li a, .navbar .navbar__menu.active li a {
         margin: 0;
         font-size: 20px;
     }
 
-    .navbar .navbar__menu li:hover {
+    .navbar .navbar__menu li:hover, .navbar .navbar__menu.active li:hover {
         color: rgb(104, 104, 104);
         transition: 0.3s;
     }
@@ -632,10 +691,15 @@ footer p {
         padding: 15px 45px;
     }
 
+    main section:first-child {
+        min-height: 700px;
+    }
+
     .podheader {
         display: grid;
         grid-template-columns: 3fr 2fr;
         grid-template-rows: 1fr 1fr;
+        min-height: calc(100vh - 58px);
     }
 
     .podheader__title {
@@ -715,76 +779,5 @@ footer p {
 @media (min-width: 1420px) {
     .icon {
         top: 80px;
-    }
-}
-
-:root {
-    --delay: 0;
-    --duration: 800ms;
-    --iterations: 1;
-}
-
-.reveal-text,
-.reveal-text::after {
-    animation-delay: var(--animation-delay, 2s);
-    animation-iteration-count: var(--iterations, 1);
-    animation-duration: var(--duration, 800ms);
-    animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.reveal-text {
-    --animation-delay: var(--delay, 0);
-    --animation-duration: var(--duration, 800ms);
-    --animation-iterations: var(--iterations, 1);
-    position: relative;
-    animation-name: clip-text;
-    color: #fff;
-    cursor: default;
-}
-
-.reveal-text::after {
-    content: "";
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    pointer-events: none;
-    animation-name: text-revealer;
-}
-
-@keyframes clip-text {
-    from {
-        clip-path: inset(0 100% 0 0);
-    }
-
-    to {
-        clip-path: inset(0 0 0 0);
-    }
-}
-
-@keyframes text-revealer {
-
-    0%,
-    50% {
-        transform-origin: 0 50%;
-    }
-
-    60%,
-    100% {
-        transform-origin: 100% 50%;
-    }
-
-    60% {
-        transform: scaleX(1);
-    }
-
-    100% {
-        transform: scaleX(0);
     }
 }
