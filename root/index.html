@@ -36,7 +36,7 @@
 
     <section class="block--bg">
         <div class="podheader">
-            <div class="podheader__title"><h1>Sappherio &copy; kolekce pro muže</h1><h2><span class="typing"></span></h2></div>
+            <div class="podheader__title"><h1 class="reveal-text">Sappherio &copy; kolekce pro muže</h1><h2>Azul DZ330X</h2></div>
             <figure class="photo__block">
                 <a href="#edice" class="photo--big">
                     <img src="./img/Hodinky_modre.png" alt="modré hodinky sappherio">
@@ -45,7 +45,7 @@
             <div class="podheader__caption">
                 <p>Poznejte naše nové hodinky</p>
                 <h2 class="header--big">Staráme se o čas.</h2>
-                <span class="icon"><a href="#welcome"><img src="./img/angle-down.svg" alt="angle down šipka dolů"></a></span>
+                <span class="icon"><a href="#welcome"><svg width="20px" height="20px" viewBox="0 0 20 20" class="h-[26px] w-[26px]" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="m19.022 5-9.023 9.025L.977 5.002 0 5.98l9.999 10 10-10.002L19.024 5z" fill="currentcolor" fill-rule="evenodd"></path></svg></a></span>
             </div>
     </div>
     </section>
@@ -127,10 +127,22 @@
     <section class="block--dark">
         <div>
             <ul class="shop_list">
-                <li class="shop_list__item"><a href="#">Hodinářství Bechyně</a><span><a href="#" ><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
-                <li class="shop_list__item"><a href="#">Hodinky.cz</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
-                <li class="shop_list__item"><a href="#">Hodinářství U Soudu</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
-                <li class="shop_list__item"><a href="#">Tovys.cz</a><span><a href="#"><img src="./img/shop-link.svg" alt="ikona šipka doprava koupit"></a></span></li>
+                <li class="shop_list__item"><a href="#">Hodinářství Bechyně</a><div class="arrow">
+                    <div class="arrow-top"></div>
+                    <div class="arrow-bottom"></div>
+                  </div></li>
+                <li class="shop_list__item"><a href="#">Hodinky.cz</a><div class="arrow">
+                    <div class="arrow-top"></div>
+                    <div class="arrow-bottom"></div>
+                  </div></li>
+                <li class="shop_list__item"><a href="#">Hodinářství U Soudu</a><div class="arrow">
+                    <div class="arrow-top"></div>
+                    <div class="arrow-bottom"></div>
+                  </div></li>
+                <li class="shop_list__item"><a href="#">Tovys.cz</a><div class="arrow">
+                    <div class="arrow-top"></div>
+                    <div class="arrow-bottom"></div>
+                  </div></li>
             </ul>
         </div>
     </section>
@@ -179,8 +191,6 @@
             $('.navbar .navbar__menu').removeClass("active");
         });
     </script>
-    <script src="./script.js"></script>
-
 </body>
 </html>
 

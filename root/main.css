@@ -116,7 +116,7 @@ main section:first-child {
 }
 
 .podheader {
-    height: calc(100vh - 40px);
+    min-height: calc(100vh - 40px);
     max-height: 1040px;
     padding: 0;
     display: flex;
@@ -164,6 +164,11 @@ main section:first-child {
     transition: 0.3s;
 }
 
+.podheader__caption .icon a {
+    text-decoration: none;
+    color: white;
+}
+
 .photo__block {
     margin: 2em 0 0 0;
     display: flex;
@@ -182,6 +187,59 @@ main section:first-child {
 
 .photo__block .photo--big img {
     width: 100%;
+}
+
+.arrow {
+    cursor: pointer;
+    height: 20px;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform 0.1s;
+    width: 20px;
+}
+.arrow-top, .arrow-bottom {
+    background-color: #666;
+    height: 4px;
+    left: -5px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.arrow-top:after, .arrow-bottom:after {
+    background-color: #fff;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+}
+.arrow-top {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+}
+.arrow-top:after {
+    left: 100%;
+    right: 0;
+    transition-delay: 0s;
+}
+.arrow-bottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+.arrow-bottom:after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0.15s;
+}
+.arrow:hover .arrow-top:after {
+    left: 0;
+    transition-delay: 0.15s;
+}
+.arrow:hover .arrow-bottom:after {
+    right: 0;
+    transition-delay: 0s;
+}
+.arrow:active {
+    transform: translateX(-50%) translateY(-50%) scale(0.9);
 }
 
 
@@ -304,7 +362,8 @@ svg {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin: 0.7em;
+    margin: 1em;
+    align-items: center;
 }
 
 .shop_list .shop_list__item a {
@@ -413,7 +472,6 @@ footer p {
     }
 }
 
-
 @media (min-width: 760px) { 
     header nav {
         padding: 8px 50px;
@@ -462,6 +520,12 @@ footer p {
         transition: 0.3s;
     }
 
+    main .block--bg:first-child {
+        background: var(--blue);  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #172033, #354a76);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #172033, #354a76); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
     .podheader__title {
         padding: 35px 50px 0 0;
     }
@@ -505,6 +569,13 @@ footer p {
 
     svg {
         margin-bottom: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .arrow {
+        height: 25px;
+        width: 25px;
     }
 
 }
@@ -577,7 +648,7 @@ footer p {
 
     .podheader__caption .icon {
         width: 60%;
-        text-align: center;
+        text-align: left;
         margin-top: 50px;
         order: 3;
     }
@@ -611,4 +682,63 @@ footer p {
     .icon {
         top: 80px;
     }
+}
+
+:root {
+    --delay: 0;
+    --duration: 800ms;
+    --iterations: 1;
+}
+
+.reveal-text, .reveal-text::after {
+    animation-delay: var(--animation-delay, 2s);
+    animation-iteration-count: var(--iterations, 1);
+    animation-duration: var(--duration, 800ms);
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.reveal-text {
+    --animation-delay: var(--delay, 0);
+    --animation-duration: var(--duration, 800ms);
+    --animation-iterations: var(--iterations, 1);
+    position: relative;
+    animation-name: clip-text;
+    color: #fff;
+    cursor: default;
+}
+.reveal-text::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: text-revealer;
+}
+@keyframes clip-text {
+    from {
+        clip-path: inset(0 100% 0 0);
+   }
+    to {
+        clip-path: inset(0 0 0 0);
+   }
+}
+@keyframes text-revealer {
+    0%, 50% {
+        transform-origin: 0 50%;
+   }
+    60%, 100% {
+        transform-origin: 100% 50%;
+   }
+    60% {
+        transform: scaleX(1);
+   }
+    100% {
+        transform: scaleX(0);
+   }
 }
