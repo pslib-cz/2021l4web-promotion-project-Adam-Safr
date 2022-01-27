@@ -1,160 +1,193 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Roboto+Slab:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Roboto+Slab:wght@200;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.css">
-    <link href="./main.css" rel="stylesheet" >
-    <title>Sappherio | České pánské hodinky</title>
+    <link href="./main.css" rel="stylesheet">
+    <title>Sappherio | Pánské Hodinky z České republiky</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="navbar__icon navbar__btn">
-                    <img src="./img/menu.svg" alt="navigační menu" />
+                <img src="./img/menu.svg" alt="navigační menu" />
             </div>
             <ul class="navbar__menu">
-                <li><a href="#o-znacce" class="navbar__btn">O značce</a></li>
-                <li><a href="#edice" class="navbar__btn">Nová edice</a></li>
-                <li><a href="#footer" class="navbar__btn">Informace</a></li>
+                <li><a href="#o-znacce" class="navbar__abtn">O značce</a></li>
+                <li><a href="#edice" class="navbar__batn">Nová edice</a></li>
+                <li><a href="#footer" class="navbar__batn">Informace</a></li>
             </ul>
             <h2 class="navbar__logo">sappherio</h2>
             <div class="navbar__icon">
-                    <a href="#koupit"><img src="./img/cart.svg" alt="nákupní košík ikona" /></a>
+                <a href="#koupit"><img src="./img/cart.svg" alt="nákupní košík ikona" /></a>
             </div>
         </nav>
     </header>
 
     <main>
 
-    <section class="block--bg">
-        <div class="podheader">
-            <div class="podheader__title"><h1 class="reveal-text">Sappherio &copy; kolekce pro muže</h1><h2>Azul DZ330X</h2></div>
-            <figure class="photo__block">
-                <a href="#edice" class="photo--big">
-                    <img src="./img/Hodinky_modre.png" alt="modré hodinky sappherio">
-                </a>
-            </figure>
-            <div class="podheader__caption">
-                <p>Poznejte naše nové hodinky</p>
-                <h2 class="header--big">Staráme se o čas.</h2>
-                <span class="icon"><a href="#welcome"><svg width="20px" height="20px" viewBox="0 0 20 20" class="h-[26px] w-[26px]" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="m19.022 5-9.023 9.025L.977 5.002 0 5.98l9.999 10 10-10.002L19.024 5z" fill="currentcolor" fill-rule="evenodd"></path></svg></a></span>
-            </div>
-    </div>
-    </section>
-
-    <section id="welcome">
-        <div>
-            <h2 class="header--small header--line">Elegance a moderní design</h2>
-            <p>Nová česká značka elegantních a kvalitních hodinek přichází z novou kolekcí. Modrá safírová barva typická pro naši značku vyniká v minimalistických detailech na hodinkách z nerezové oceli. Přesný čas zaručují švýcarské ručičky.</p>
-        </div>
-
-    <div class="container">
-            <div class="glide glide glide--ltr glide--carousel glide--swipeable">
-                <div class="glide__track" data-glide-el="track">
-                  <ul class="glide__slides">
-                    <li class="glide__slide glide__slide_1"><img src="./img/Hodinky_sako_medium.jpeg"></li>
-                    <li class="glide__slide glide__slide_2"><img src="./img/Kampan_fotky.jpg" alt="modré hodinky sappherio a muž v bílé košili"></li>
-                    <li class="glide__slide glide__slide_3"><img src="./img/Hodinky_bila_kosile_medium.jpg" alt="modré hodinky sappherio a muž v bílé košili"></li>
-                  </ul>
+        <section class="block--bg">
+            <div class="podheader">
+                <div class="podheader__title">
+                    <h1 class="reveal-text">Sappherio &copy; kolekce pro muže</h1>
+                    <h2>Azul DZ330X</h2>
                 </div>
-              </div> 
-    </div>
-        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-        <script>
-            var glide = new Glide('.glide', {
-                type: 'carousel',
-                focusAt: 'center',
-                animationDuration: 300,
-                autoplay: 3000,
-                perView: 2,
-                hoverpause: true,
-                peek: {
-                    before: 50,
-                    after: 50
-                },
-                breakpoints: {
-                    1200: {
+                <figure class="photo__block">
+                    <a href="#edice" class="photo--big">
+                        <img src="./img/Hodinky_modre.png" alt="modré hodinky sappherio">
+                    </a>
+                </figure>
+                <div class="podheader__caption">
+                    <p>Poznejte naše nové hodinky</p>
+                    <h2 class="header--big">Staráme se o čas.</h2>
+                    <span class="icon"><a href="#welcome"><svg width="20px" height="20px" viewBox="0 0 20 20"
+                                class="h-[26px] w-[26px]" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="m19.022 5-9.023 9.025L.977 5.002 0 5.98l9.999 10 10-10.002L19.024 5z"
+                                    fill="currentcolor" fill-rule="evenodd"></path>
+                            </svg></a></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="welcome">
+            <div>
+                <h2 class="header--small header--line">Elegance a moderní design</h2>
+                <p>Nová česká značka elegantních a kvalitních hodinek přichází z novou kolekcí. Modrá safírová barva
+                    typická pro naši značku vyniká v minimalistických detailech na hodinkách z nerezové oceli. Přesný
+                    čas zaručují švýcarské ručičky.</p>
+            </div>
+
+            <div class="container">
+                <div class="glide glide glide--ltr glide--carousel glide--swipeable">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide glide__slide_1"><img src="./img/Hodinky_sako_medium.jpeg"></li>
+                            <li class="glide__slide glide__slide_2"><img src="./img/Kampan_fotky.jpg"
+                                    alt="modré hodinky sappherio a muž v bílé košili"></li>
+                            <li class="glide__slide glide__slide_3"><img src="./img/Hodinky_bila_kosile_medium.jpg"
+                                    alt="modré hodinky sappherio a muž v bílé košili"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+            <script>
+                var glide = new Glide('.glide', {
+                    type: 'carousel',
+                    focusAt: 'center',
+                    animationDuration: 300,
+                    autoplay: 3000,
                     perView: 2,
+                    hoverpause: true,
+                    peek: {
+                        before: 50,
+                        after: 50
                     },
-                    550: {
-                    perView: 1
-                    },
-                    450: {
-                    perView: 1
+                    breakpoints: {
+                        1200: {
+                            perView: 2,
+                        },
+                        550: {
+                            perView: 1
+                        },
+                        450: {
+                            perView: 1
+                        }
                     }
-                }
                 })
                 glide.mount()
-        </script> 
-    </section>
+            </script>
+        </section>
 
-    <section class="block--dark" id="o-znacce">
-        <div>
-            <h2 class="header--small header--line">O značce</h2>
-            <p>Sappherio je česká značka zabývající se výrobou kvalitních hodinek. Použití prémiových materiálů a moderní minimalistický design nám dává náskok od konkurence. Dle názvu je pro nás typická safírová barva elegantně použitá v hodinkách.</p>
+        <section class="block--dark" id="o-znacce">
+            <div>
+                <h2 class="header--small header--line">O značce</h2>
+                <p>Sappherio je česká značka zabývající se výrobou kvalitních hodinek. Použití prémiových materiálů a
+                    moderní minimalistický design nám dává náskok od konkurence. Dle názvu je pro nás typická safírová
+                    barva elegantně použitá v hodinkách.</p>
                 <svg class="animation" xmlns="http://www.w3.org/2000/svg" width="231" height="61" viewBox="0 0 231 61">
-                <text id="Sappherio" fill="#fff" font-size="40" font-family="KellySlab-Regular, Kelly Slab">
-                    <tspan x="0" y="48">sappherio</tspan></text>
+                    <text id="Sappherio" fill="#fff" font-size="40" font-family="KellySlab-Regular, Kelly Slab">
+                        <tspan x="0" y="48">sappherio</tspan>
+                    </text>
                 </svg>
-        </div>
-    </section>
-
-    <section class="block--bg" id="edice">
-        <div>
-            <h2 class="header--small header--line">Přicházíme s novou edicí hodinek</h2>
-            <p>Objevte novou kolekci značky Sappherio. Precizní, elegantní hodinky z kolekce Azul. Hodinky této řady nabízí jedinečný a jednoduchý design s prestižním provedením. Hodinky sednou na ruku každému. Objevte kolekci Azul a perfektně ji zkombinujte s vaším stylem.</p>
-            <figure class="photo__block">
-                <a href="#koupit" class="photo--small">
-                    <img src="./img/Hodinky_modre_male.png" alt="modré hodinky sappherio">
-                </a>
-                <figcaption><p>Sappherio Azul DZ330X</p>
-                <p>85 750   Kč</p></figcaption>
-            </figure>
-            <div class="btn_block">
-                <button class="btn-primary">Koupit</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="block--dark">
-        <div>
-            <ul class="shop_list">
-                <li class="shop_list__item"><a href="#">Hodinářství Bechyně</a><div class="arrow">
-                    <div class="arrow-top"></div>
-                    <div class="arrow-bottom"></div>
-                  </div></li>
-                <li class="shop_list__item"><a href="#">Hodinky.cz</a><div class="arrow">
-                    <div class="arrow-top"></div>
-                    <div class="arrow-bottom"></div>
-                  </div></li>
-                <li class="shop_list__item"><a href="#">Hodinářství U Soudu</a><div class="arrow">
-                    <div class="arrow-top"></div>
-                    <div class="arrow-bottom"></div>
-                  </div></li>
-                <li class="shop_list__item"><a href="#">Tovys.cz</a><div class="arrow">
-                    <div class="arrow-top"></div>
-                    <div class="arrow-bottom"></div>
-                  </div></li>
-            </ul>
-        </div>
-    </section>
+        <section class="block--bg" id="edice">
+            <div>
+                <h2 class="header--small header--line">Přicházíme s novou edicí hodinek</h2>
+                <p>Objevte novou kolekci značky Sappherio. Precizní, elegantní hodinky z kolekce Azul. Hodinky této řady
+                    nabízí jedinečný a jednoduchý design s prestižním provedením. Hodinky sednou na ruku každému.
+                    Objevte kolekci Azul a perfektně ji zkombinujte s vaším stylem.</p>
+                <figure class="photo__block">
+                    <a href="#koupit" class="photo--small">
+                        <img src="./img/Hodinky_modre_male.png" alt="modré hodinky sappherio">
+                    </a>
+                    <figcaption>
+                        <p>Sappherio Azul DZ330X</p>
+                        <p>85 750 Kč</p>
+                    </figcaption>
+                </figure>
+                <div class="btn_block">
+                    <button class="btn-primary">Koupit</button>
+                </div>
+            </div>
+        </section>
 
-    <section class="block-small block--padding block--bg">
-        <div>
-            <h2 class="header--biggest">Staráme se o čas.</h2>
-            <p class="podtitle">Novinky emailem, přihlaš se k odběru</p>
-            <div class="btn_block btn--left">
-            <input class="button btn-primary" placeholder="Zadejte váš email"></input>
-        </div>
-    </section>
+        <section class="block--dark">
+            <div>
+                <ul class="shop_list">
+                    <li class="shop_list__item"><a href="#">Hodinářství Bechyně</a>
+                        <div class="arrow">
+                            <div class="arrow-top"></div>
+                            <div class="arrow-bottom"></div>
+                        </div>
+                    </li>
+                    <li class="shop_list__item"><a href="#">Hodinky.cz</a>
+                        <div class="arrow">
+                            <div class="arrow-top"></div>
+                            <div class="arrow-bottom"></div>
+                        </div>
+                    </li>
+                    <li class="shop_list__item"><a href="#">Hodinářství U Soudu</a>
+                        <div class="arrow">
+                            <div class="arrow-top"></div>
+                            <div class="arrow-bottom"></div>
+                        </div>
+                    </li>
+                    <li class="shop_list__item"><a href="#">Tovys.cz</a>
+                        <div class="arrow">
+                            <div class="arrow-top"></div>
+                            <div class="arrow-bottom"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="block-small block--padding block--bg">
+            <div>
+                <h2 class="header--biggest">Staráme se o čas.</h2>
+                <p class="podtitle">Novinky emailem, přihlaš se k odběru</p>
+                <div class="btn_block btn--left">
+                    <input class="button btn-primary" placeholder="Zadejte váš email"></input>
+                </div>
+        </section>
     </main>
 
     <footer class="block--padding block--dark" id="footer">
@@ -164,14 +197,16 @@
             <li class="row-list__item"><a>FAQ</a></li>
             <li class="row-list__item"><a>Návody</a></li>
         </ul>
-        <div class="block-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="25" viewBox="0 0 37 25">
-            <defs>
-              <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 255 170">
-                <image width="255" height="170" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAACqCAMAAABVlWm8AAAAIVBMVEX////XFBoRRX5YfKTn7PJTNV3GGCIhUYegtcsiQXaVJDv1T9UEAAADGUlEQVR4nOXSCXbbUAxD0UCdu/8F123a1HFkDV/8JAByBbwH7+XT55fWt3z7Xv1C6S3L0jqBm791Asuf65vAq79vAsu/a5rAm79pAsvddUzg3t8xgeX9tUvgwd8ugUd/twQ++nslsOJvlcCqv1EC6/4+CTzzd0ngqb9JAhv+Fgls+TsksO33T2DHb5/Art88gX2/dwJH/M4JHPIbJ3DQb5vAUb9rAsf9ngmc8FsmcMpvmMA5v18CZ/1uCZz2myUw4LdKYMTvlMCY3yeBQb9NAsN+kwTG/R4JXPE7JHDJb5DARb98Alf96glc92snEOCXTiDEL5xAjF83gSi/agJhftEEAv2SCUT6FROI9eslEOyXSyDcL5ZAvF8rgRl+pQSm+IUSmOSXSWCWXyWBeX6NBCb6JRKY6hdIYK6fP4HZfvYEpvvJE0jwUyeQ4WdOIMfPm0CSnzaBND9pAnl+zgQy/YwJpPoJE0j20yWQ7WdLIN/PlUCBnyqBEj9RAjV+ngSq/CwJlPlJEij0UyRQ6WdIoNb/5Stqr9T/42exvtZfPn6pn2B8FPoZxkeZn2N8VPlJxkeNn2Z8lPh5xkeBn2l85Pupxke2n2x8JPvZxkeqn298ZPoJx0een3J8pPk5x0eSn3V85Phpx0eGn3h8JPiZx8d0P/f4mO0nHx9z/fTjY6qff3xM9CuMj3l+ifExyy8yPib5VcbHFL/O+JjhFxof8X6p8RHu1xofwX618RHrlxsfkX7B8RHoVxwfYX7N8RHlFx0fMX7Z8RHi1x0fAX7l8XHdLz0+rvrFx8dFv/r4uOTXHx9X/AbjY9xvMT6G/R7jY9DvMj7G/DbjY8RvND4G/E7j47Tfa3yc9ZuNj3N+u/Fxyu83Pk74HcfHcb/l+DjqNx0fB/2u4+OQ33d8HPEbj499v/X42PV7j48dv/v42Pbbj48tf4PxseHvMD6e+nuMj2f+JuNj3d9mfKz6+4yPFX+n8fHR32p8PPqbjY8Hf7fx8c7fb3zc+xuOj//+luPjzd9zfPz1dx0fr/624+O3v/H4t3vpPP7tfgGGgJseBZBUxAAAAABJRU5ErkJggg=="/>
-              </pattern>
-            </defs>
-            <rect id="NoPath" width="37" height="25" fill="url(#pattern)"/>
-          </svg>
+        <div class="block-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="37" height="25" viewBox="0 0 37 25">
+                <defs>
+                    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 255 170">
+                        <image width="255" height="170"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAACqCAMAAABVlWm8AAAAIVBMVEX////XFBoRRX5YfKTn7PJTNV3GGCIhUYegtcsiQXaVJDv1T9UEAAADGUlEQVR4nOXSCXbbUAxD0UCdu/8F123a1HFkDV/8JAByBbwH7+XT55fWt3z7Xv1C6S3L0jqBm791Asuf65vAq79vAsu/a5rAm79pAsvddUzg3t8xgeX9tUvgwd8ugUd/twQ++nslsOJvlcCqv1EC6/4+CTzzd0ngqb9JAhv+Fgls+TsksO33T2DHb5/Art88gX2/dwJH/M4JHPIbJ3DQb5vAUb9rAsf9ngmc8FsmcMpvmMA5v18CZ/1uCZz2myUw4LdKYMTvlMCY3yeBQb9NAsN+kwTG/R4JXPE7JHDJb5DARb98Alf96glc92snEOCXTiDEL5xAjF83gSi/agJhftEEAv2SCUT6FROI9eslEOyXSyDcL5ZAvF8rgRl+pQSm+IUSmOSXSWCWXyWBeX6NBCb6JRKY6hdIYK6fP4HZfvYEpvvJE0jwUyeQ4WdOIMfPm0CSnzaBND9pAnl+zgQy/YwJpPoJE0j20yWQ7WdLIN/PlUCBnyqBEj9RAjV+ngSq/CwJlPlJEij0UyRQ6WdIoNb/5Stqr9T/42exvtZfPn6pn2B8FPoZxkeZn2N8VPlJxkeNn2Z8lPh5xkeBn2l85Pupxke2n2x8JPvZxkeqn298ZPoJx0een3J8pPk5x0eSn3V85Phpx0eGn3h8JPiZx8d0P/f4mO0nHx9z/fTjY6qff3xM9CuMj3l+ifExyy8yPib5VcbHFL/O+JjhFxof8X6p8RHu1xofwX618RHrlxsfkX7B8RHoVxwfYX7N8RHlFx0fMX7Z8RHi1x0fAX7l8XHdLz0+rvrFx8dFv/r4uOTXHx9X/AbjY9xvMT6G/R7jY9DvMj7G/DbjY8RvND4G/E7j47Tfa3yc9ZuNj3N+u/Fxyu83Pk74HcfHcb/l+DjqNx0fB/2u4+OQ33d8HPEbj499v/X42PV7j48dv/v42Pbbj48tf4PxseHvMD6e+nuMj2f+JuNj3d9mfKz6+4yPFX+n8fHR32p8PPqbjY8Hf7fx8c7fb3zc+xuOj//+luPjzd9zfPz1dx0fr/624+O3v/H4t3vpPP7tfgGGgJseBZBUxAAAAABJRU5ErkJggg==" />
+                    </pattern>
+                </defs>
+                <rect id="NoPath" width="37" height="25" fill="url(#pattern)" />
+            </svg>
         </div>
         <ul class="row-list">
             <li class="row-list__item"><a>Sídlo</a></li>
@@ -181,7 +216,7 @@
         </ul>
         <p>&copy; 2021</p>
     </footer>
-    
+
     <script>
         $('.navbar__btn').click(function () {
             $('.navbar .navbar__menu').toggleClass("active");
@@ -192,5 +227,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>
