@@ -98,6 +98,7 @@ nav .navbar__menu li a {
     background-color: var(--white);
     margin-top: 40px;
     padding: 30px 0 0 0;
+    z-index: 99;
 }
 
 main section:first-child {
