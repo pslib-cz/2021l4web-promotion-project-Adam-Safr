@@ -22,7 +22,6 @@ body {
     background-color: var(--blue);
     box-shadow: inset 0px -32px 99px var(--black);
     margin: 0;
-    scroll-behavior: smooth;
     min-width: 340px;
     overflow-x: hidden;
 }
