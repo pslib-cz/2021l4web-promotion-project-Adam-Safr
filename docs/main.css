@@ -285,6 +285,10 @@ input.button {
     box-sizing: border-box;
 }
 
+::placeholder {
+    color: var(--font-color);
+}
+
 .photo__block .photo--small {
     width: 70%;
     margin: 0 auto;
