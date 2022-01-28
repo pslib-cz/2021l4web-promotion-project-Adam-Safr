@@ -78,7 +78,7 @@ nav .navbar__menu li a {
     display: inline-block;
     margin: 25px 0;
     font-size: 25px;
-    color: var(--font);
+    color: var(--blue);
     text-decoration: none;
 }
 
