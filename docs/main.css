@@ -74,7 +74,7 @@ nav .navbar__menu li {
     display: block;
 }
 
-nav .navbar__menu li a {
+nav .navbar__menu li .navbar__menu__list {
     display: inline-block;
     margin: 25px 0;
     font-size: 25px;
@@ -261,15 +261,15 @@ button,
     text-align: center;
 }
 
-button.btn-primary:hover,
-.button.btn-primary:hover,
-.button.btn-primary:focus {
+button.btn--primary:hover,
+.button.btn--primary:hover,
+.button.btn--primary:focus {
     color: var(--blue);
     background-color: var(--white);
 }
 
-button.btn-primary,
-.button.btn-primary {
+button.btn--primary,
+.button.btn--primary {
     color: var(--white);
     background-color: transparent;
     transition: 0.4s;
@@ -536,19 +536,23 @@ footer p {
         padding: 15px 35px 0 35px;
     }
 
-    .navbar .navbar__btn, .navbar .navbar__menu.active .navbar__btn {
+    .navbar .navbar__btn,
+    .navbar .navbar__menu.active .navbar__btn {
         display: none;
     }
 
-    .navbar .navbar__logo, .navbar .navbar__menu.active .navbar__logo {
+    .navbar .navbar__logo,
+    .navbar .navbar__menu.active .navbar__logo {
         order: 1;
     }
 
-    .navbar .navbar__icon, .navbar .navbar__menu.active .navbar__icon {
+    .navbar .navbar__icon,
+    .navbar .navbar__menu.active .navbar__icon {
         order: 3;
     }
 
-    .navbar .navbar__menu, .navbar .navbar__menu.active {
+    .navbar .navbar__menu,
+    .navbar .navbar__menu.active {
         position: static;
         height: 100%;
         width: auto;
@@ -558,19 +562,22 @@ footer p {
         margin: 0;
     }
 
-    .navbar .navbar__menu li, .navbar .navbar__menu.active li {
+    .navbar .navbar__menu li,
+    .navbar .navbar__menu.active li {
         list-style: none;
         display: inline-block;
         margin: 0 1.7em;
         padding: 0;
     }
 
-    .navbar .navbar__menu li a, .navbar .navbar__menu.active li a {
+    .navbar .navbar__menu li .navbar__menu__list,
+    .navbar .navbar__menu.active li .navbar__menu__list {
         margin: 0;
         font-size: 20px;
     }
 
-    .navbar .navbar__menu li:hover, .navbar .navbar__menu.active li:hover {
+    .navbar .navbar__menu li:hover,
+    .navbar .navbar__menu.active li:hover {
         color: rgb(104, 104, 104);
         transition: 0.3s;
     }
@@ -600,8 +607,8 @@ footer p {
         width: 50%;
     }
 
-    button.btn-primary,
-    .button.btn-primary {
+    button.btn--primary,
+    .button.btn--primary {
         max-width: 300px
     }
 

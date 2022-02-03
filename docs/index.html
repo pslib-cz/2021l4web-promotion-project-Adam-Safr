@@ -6,16 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <meta name="description"
+        content="Sappherio je česká značka kvalitních a elegantních pánských hodinek. Nová kolekce Azul s typickými modrými safírovými detaily na ciferníku. Poznejte naší kolekci.">
+    <meta name="keywords"
+        content="Sappherio, Hodinky, Safír, Pánské hodinky, Hodinky z Česka, Safírové hodinky, Sappherio hodinky, pánské elegantní hodinky, mužské hodinky">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Roboto+Slab:wght@200;400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.css">
     <link href="./main.css" rel="stylesheet">
     <title>Sappherio | Pánské Hodinky z České republiky</title>
 </head>
@@ -27,13 +30,13 @@
                 <img src="./img/menu.svg" alt="navigační menu" />
             </div>
             <ul class="navbar__menu">
-                <li><a href="#o-znacce" class="navbar__abtn">O značce</a></li>
-                <li><a href="#edice" class="navbar__batn">Nová edice</a></li>
-                <li><a href="#footer" class="navbar__batn">Informace</a></li>
+                <li><a href="#o-znacce" class="navbar__menu__list">O značce</a></li>
+                <li><a href="#edice" class="navbar__menu__list">Nová edice</a></li>
+                <li><a href="#footer" class="navbar__menu__list">Informace</a></li>
             </ul>
             <h2 class="navbar__logo">sappherio</h2>
             <div class="navbar__icon">
-                <a href="#koupit"><img src="./img/cart.svg" alt="nákupní košík ikona" /></a>
+                <a href="#koupit"><img src="./img/cart.svg" alt="ikona nákupní košík" /></a>
             </div>
         </nav>
     </header>
@@ -76,9 +79,12 @@
                 <div class="glide glide--ltr glide--carousel glide--swipeable">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
-                            <li class="glide__slide glide__slide_1"><img src="./img/Hodinky_sako_medium.jpeg" alt="Muž v saku s hodinkami"></li>
-                            <li class="glide__slide glide__slide_2"><img src="./img/Kampan_fotky.jpg" alt="modré hodinky sappherio a muž v bílé košili"></li>
-                            <li class="glide__slide glide__slide_3"><img src="./img/Hodinky_bila_kosile_medium.jpg" alt="modré hodinky sappherio a muž v bílé košili"></li>
+                            <li class="glide__slide glide__slide_1"><img src="./img/Hodinky_sako_medium.jpeg"
+                                    alt="Muž v saku s hodinkami"></li>
+                            <li class="glide__slide glide__slide_2"><img src="./img/Kampan_fotky.jpg"
+                                    alt="modré hodinky sappherio a muž v bílé košili"></li>
+                            <li class="glide__slide glide__slide_3"><img src="./img/Hodinky_bila_kosile_medium.jpg"
+                                    alt="modré hodinky sappherio a muž v bílé košili"></li>
                         </ul>
                     </div>
                 </div>
@@ -142,14 +148,14 @@
                     </figcaption>
                 </figure>
                 <div class="btn_block">
-                    <button class="btn-primary">Koupit</button>
+                    <button class="btn--primary">Koupit</button>
                 </div>
             </div>
         </section>
 
         <section class="block--dark">
             <div>
-                <h2 class="header--small header--line">Kde můžete naše hodinky zakoupit</h2>
+                <h2 class="header--small header--line">Kde také můžete naše hodinky zakoupit</h2>
                 <ul class="shop_list">
                     <li class="shop_list__item"><a href="#">Hodinářství Bechyně</a>
                         <div class="arrow">
@@ -179,18 +185,18 @@
             </div>
         </section>
 
-        <section class="block-small block--padding block--bg">
+        <section class="block-small block--bg">
             <div>
                 <h2 class="header--biggest">Staráme se o čas.</h2>
                 <p class="podtitle">Novinky emailem, přihlaš se k odběru</p>
                 <div class="btn_block btn--left">
-                    <input class="button btn-primary" placeholder="Zadejte váš email" />
+                    <input class="button btn--primary" placeholder="Zadejte váš email" />
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="block--padding block--dark" id="footer">
+    <footer class="block--dark" id="footer">
         <ul class="row-list">
             <li class="row-list__item"><a>Kontakty</a></li>
             <li class="row-list__item"><a>Spolupráce</a></li>
@@ -216,7 +222,6 @@
         </ul>
         <p>&copy; 2021</p>
     </footer>
-
     <script>
         $('.navbar__btn').click(function () {
             $('.navbar .navbar__menu').toggleClass("active");
