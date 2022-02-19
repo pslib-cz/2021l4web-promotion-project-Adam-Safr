@@ -54,7 +54,7 @@
             </ul>
             <h2 class="navbar__logo">sappherio</h2>
             <div class="navbar__icon">
-                <a href="#koupit"><img src="./img/cart.svg" alt="ikona nákupní košík" /></a>
+                <a href="#koupit" onclick="ga('send', 'event1', 'Nakupní košík', 'click');"><img src="./img/cart.svg" alt="ikona nákupní košík"/></a>
             </div>
         </nav>
     </header>
@@ -68,7 +68,7 @@
                     <h2>Azul DZ330X</h2>
                 </div>
                 <figure class="photo__block">
-                    <a href="#edice" class="photo--big">
+                    <a href="#edice" class="photo--big" onclick="ga('send', 'event2', 'Main photo', 'click');">
                         <img src="./img/Hodinky_modre.png" alt="modré hodinky sappherio">
                     </a>
                 </figure>
@@ -166,7 +166,7 @@
                     </figcaption>
                 </figure>
                 <div class="btn_block">
-                    <button class="btn--primary buy-btn">Koupit</button>
+                    <button onclick="ga('send', 'event3', 'Koupit', 'click', 'Koupit hodinky', '85750');" class="btn--primary buy-btn">Koupit</button>
                 </div>
             </div>
         </section>
