@@ -48,9 +48,9 @@
                 <img src="./img/menu.svg" alt="navigační menu" />
             </div>
             <ul class="navbar__menu">
-                <li><a href="#o-znacce" class="navbar__menu__list">O značce</a></li>
-                <li><a href="#edice" class="navbar__menu__list">Nová edice</a></li>
-                <li><a href="#footer" class="navbar__menu__list">Informace</a></li>
+                <li><a href="#o-znacce" onclick="gtag('event','click', { 'event_category':'click', 'event_label':'navbar_o-znacce', 'value': 85750 })" class="navbar__menu__list">O značce</a></li>
+                <li><a href="#edice" onclick="gtag('event','click', { 'event_category':'click', 'event_label':'navbar_edice'})" class="navbar__menu__list">Nová edice</a></li>
+                <li><a href="#footer" onclick="gtag('event','click', { 'event_category':'click', 'event_label':'navbar_informace'})" class="navbar__menu__list">Informace</a></li>
             </ul>
             <h2 class="navbar__logo">sappherio</h2>
             <div class="navbar__icon">
@@ -208,7 +208,7 @@
                 <h2 class="header--biggest">Staráme se o čas.</h2>
                 <p class="podtitle">Novinky emailem, přihlaš se k odběru</p>
                 <div class="btn_block btn--left">
-                    <input class="button btn--primary newsletter" placeholder="Zadejte váš email" />
+                    <input class="button btn--primary newsletter" placeholder="Zadejte váš email" onclick="gtag('event','click', { 'event_category':'click', 'event_label':'newsletter' })"/>
                 </div>
             </div>
         </section>
